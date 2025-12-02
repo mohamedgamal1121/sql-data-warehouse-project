@@ -1,4 +1,5 @@
 📦 SQL Data Warehouse from Scratch (PostgreSQL Implementation)
+
 📘 Overview
 
 This project is an end-to-end Data Engineering project where I built a complete SQL Data Warehouse from scratch using PostgreSQL.
@@ -37,7 +38,6 @@ dim_customers
 
 dim_products
 
-dim_dates
 
 Each table includes:
 
@@ -48,11 +48,12 @@ Normalized data types
 Foreign key relationships
 
 🔄 ETL / ELT Process
-Extract
+
+-Extract
 
 Import source data (CSV / external systems).
 
-Transform
+-Transform
 
 Cleaning
 
@@ -62,7 +63,7 @@ Standardization
 
 Applying business rules
 
-Load
+-Load
 
 Insert into Bronze → Silver → Gold layers
 
