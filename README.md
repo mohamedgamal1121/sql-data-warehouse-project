@@ -1,99 +1,61 @@
-📦 SQL Data Warehouse from Scratch (PostgreSQL Implementation)
+📦 SQL Data Warehouse from Scratch 
+
 📘 Overview
 
 This project is an end-to-end Data Engineering project where I built a complete SQL Data Warehouse from scratch using PostgreSQL.
 It follows a multi-layered architecture (Bronze → Silver → Gold) to collect, clean, transform, and model data for analytics.
 
-The project is inspired by Data With Baraa – SQL Data Warehouse from Scratch but fully rebuilt and implemented independently using PostgreSQL.
+The project is inspired by Data With Baraa – SQL Data Warehouse from Scratch, but fully rebuilt and implemented using PostgreSQL.
 
+ط
 🏗️ Project Architecture
-
-The Data Warehouse is designed using a three-layer architecture:
-
+د
 1️⃣ Bronze Layer – Raw Data
-
-Stores raw data exactly as ingested from source systems (CRM / ERP / CSV files).
-
+Stores raw data exactly as ingested from source systems.
 No transformations applied.
 
-Used for reproducibility and auditing.
-
 2️⃣ Silver Layer – Cleaned & Processed Data
-
-Data cleaning, formatting, deduplication, and type standardization.
-
-Business logic begins here.
-
-Acts as the base for analytical modeling.
+Data cleaning, type standardization, and basic transformations.
+Business logic starts here.
 
 3️⃣ Gold Layer – Analytics & Star Schema
+Final analytical models.
+Fact and Dimension tables for reporting and BI tools.
 
-Fact and Dimension tables (Star Schema).
 
-Designed for BI dashboards, KPIs, reporting, and OLAP-style queries.
 
-Optimized for performance and analytical workloads.
+🧱 Data Modeling (Star Schema)
 
-🧱 Data Modeling
+Fact Tables (example):
+fact_sales
 
-The Gold Layer follows a Star Schema with examples such as:
-
-Fact Table:
-
-fact_sales or fact_orders (depending on your dataset)
-
-Dimension Tables:
-
-dim_customers
-
+Dimension Tables (examples):
+dim_customer
 dim_products
-
-dim_dates
-
-dim_stores (optional)
-
 Each table includes:
-
 Surrogate keys
+Normalized data types
+Foreign key relationships
 
-Data types normalization
 
-Foreign-key relationships
-
-Incremental load logic (if applicable)
 
 🔄 ETL / ELT Process
-
-The pipeline includes:
-
 Extract
-
-Import of source data (CSV / CRM / ERP).
-
+Import source data (CSV / external systems).
 Transform
-
-Cleaning and validation
-
-Handling missing values
-
-Standardizing columns
-
+Cleaning
+Deduplication
+Standardization
 Applying business rules
 
 Load
+Insert into Bronze → Silver → Gold layers
+Build analytical schema
 
-Load into PostgreSQL Bronze → Silver → Gold layers
 
-Creation of Fact & Dimension tables
-
-Indexing & optimization
-
-Scripts are organized by layer for clarity and reusability.
 
 🛠️ Technologies Used
-Component	Tool
-Database	PostgreSQL
-ETL	SQL (manual scripts)
-Modeling	Star Schema
-Version Control	Git & GitHub
-Optional	pgAdmin / DBeaver
+PostgreSQL
+SQL
+Git / GitHub
+pgAdmin or DBeaver 
