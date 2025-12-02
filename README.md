@@ -1,4 +1,4 @@
-📦 SQL Data Warehouse from Scratch (PostgreSQL Implementation)
+📦 SQL Data Warehouse from Scratch 
 
 📘 Overview
 
@@ -75,6 +75,6 @@ PostgreSQL
 
 SQL
 
-Git / GitHub
+GitHub
 
-pgAdmin or DBeaver (optional)
+pgAdmin or DBeaver
